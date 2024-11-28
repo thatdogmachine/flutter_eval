@@ -69,13 +69,15 @@ class $Widget implements Widget, $Instance {
 
   @override
   String toStringDeep(
-          {String prefixLineOne = '',
-          String? prefixOtherLines,
-          DiagnosticLevel minLevel = DiagnosticLevel.debug}) =>
-      $value.toStringDeep(
-          prefixLineOne: prefixLineOne,
-          prefixOtherLines: prefixOtherLines,
-          minLevel: minLevel);
+        {String prefixLineOne = '',
+        String? prefixOtherLines,
+        DiagnosticLevel minLevel = DiagnosticLevel.debug,
+        int wrapWidth = 100}) =>
+    $value.toStringDeep(
+        prefixLineOne: prefixLineOne,
+        prefixOtherLines: prefixOtherLines,
+        minLevel: minLevel,
+        wrapWidth: wrapWidth);
 
   @override
   String toStringShallow(
@@ -144,13 +146,15 @@ class $StatelessWidget implements StatelessWidget, $Instance {
 
   @override
   String toStringDeep(
-          {String prefixLineOne = '',
-          String? prefixOtherLines,
-          DiagnosticLevel minLevel = DiagnosticLevel.debug}) =>
-      $value.toStringDeep(
-          prefixLineOne: prefixLineOne,
-          prefixOtherLines: prefixOtherLines,
-          minLevel: minLevel);
+        {String prefixLineOne = '',
+        String? prefixOtherLines,
+        DiagnosticLevel minLevel = DiagnosticLevel.debug,
+        int wrapWidth = 100}) =>
+    $value.toStringDeep(
+        prefixLineOne: prefixLineOne,
+        prefixOtherLines: prefixOtherLines,
+        minLevel: minLevel,
+        wrapWidth: wrapWidth);
 
   @override
   String toStringShallow(
@@ -257,14 +261,16 @@ class $StatelessWidget$bridge extends StatelessWidget
 
   @override
   String toStringDeep(
-          {String prefixLineOne = '',
-          String? prefixOtherLines,
-          DiagnosticLevel minLevel = DiagnosticLevel.debug}) =>
-      $_invoke('toStringDeep', [
-        $String(prefixLineOne),
-        prefixOtherLines == null ? const $null() : $String(prefixOtherLines),
-        $DiagnosticLevel.wrap(minLevel)
-      ]);
+        {String prefixLineOne = '',
+        String? prefixOtherLines,
+        DiagnosticLevel minLevel = DiagnosticLevel.debug,
+        int wrapWidth = 100}) =>
+    $_invoke('toStringDeep', [
+      $String(prefixLineOne),
+      prefixOtherLines == null ? const $null() : $String(prefixOtherLines),
+      $DiagnosticLevel.wrap(minLevel),
+      $int(wrapWidth)
+    ]);
 
   @override
   String toStringShallow(

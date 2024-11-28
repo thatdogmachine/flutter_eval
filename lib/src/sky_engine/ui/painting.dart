@@ -1,5 +1,9 @@
+import 'dart:ui';
+
 import 'package:dart_eval/dart_eval_bridge.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/painting.dart' as painting;
+
 
 /// dart_eval wrapper for [Color]
 class $Color implements Color, $Instance {
@@ -78,13 +82,25 @@ class $Color implements Color, $Instance {
   int get green => $value.green;
 
   @override
-  double get opacity => $value.opacity;
+  double get opacity => $value.a;
 
   @override
   int get red => $value.red;
 
   @override
   int get value => $value.value;
+
+  @override
+  double get a => $value.alpha.toDouble();
+
+  @override
+  double get b => $value.blue.toDouble();
+
+  @override
+  double get g => $value.green.toDouble();
+
+  @override
+  double get r => $value.red.toDouble();
 
   @override
   Color withAlpha(int a) => $value.withAlpha(a);
@@ -100,6 +116,25 @@ class $Color implements Color, $Instance {
 
   @override
   Color withRed(int r) => $value.withRed(r);
+
+  @override
+  int toARGB32() {
+  // Implement the logic to convert the color to ARGB32 format
+  // Return the resulting ARGB32 value
+    return 0;
+  }
+
+  @override
+  ColorSpace get colorSpace => ColorSpace.sRGB;
+  
+  @override
+  Color withValues({double? alpha, double? blue, ColorSpace? colorSpace, double? green, double? red}) {
+  // Implement the logic to create a new Color object with the given values
+  // For example:
+  return const Color(0xFF000000);
+}
+
+  
 }
 
 /// dart_eval wrapper for [Clip]

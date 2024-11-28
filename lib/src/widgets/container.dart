@@ -176,13 +176,15 @@ class $Container implements Container, $Instance {
 
   @override
   String toStringDeep(
-          {String prefixLineOne = '',
-          String? prefixOtherLines,
-          DiagnosticLevel minLevel = DiagnosticLevel.debug}) =>
-      $value.toStringDeep(
-          prefixLineOne: prefixLineOne,
-          prefixOtherLines: prefixOtherLines,
-          minLevel: minLevel);
+        {String prefixLineOne = '',
+        String? prefixOtherLines,
+        DiagnosticLevel minLevel = DiagnosticLevel.debug,
+        int wrapWidth = 100}) =>
+    $value.toStringDeep(
+        prefixLineOne: prefixLineOne,
+        prefixOtherLines: prefixOtherLines,
+        minLevel: minLevel,
+        wrapWidth: wrapWidth);
 
   @override
   String toStringShallow(

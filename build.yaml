@@ -3,4 +3,4 @@ targets:
     builders:
       # Configure the builder `pkg_name|builder_name`
       # In this case, the member_count builder defined in `../example`
-      dart_eval_generator|member_count:
+      # dart_eval_generator|member_count:
